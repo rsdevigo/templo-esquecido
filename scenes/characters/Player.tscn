@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cfkkylcqls1i8"]
+
+[ext_resource type="Script" uid="uid://damnte88bupil" path="res://orchestrations/player.torch" id="1_pq8s5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wyeb1"]
+radius = 0.25
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wyeb1"]
+radius = 0.25
+height = 1.0
+
+[node name="Player" type="CharacterBody3D" unique_id=1437837684]
+script = ExtResource("1_pq8s5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296981706]
+shape = SubResource("CapsuleShape3D_wyeb1")
+
+[node name="Malha" type="MeshInstance3D" parent="." unique_id=686209405]
+mesh = SubResource("CapsuleMesh_wyeb1")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=2090051641]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=1167424646]
+collision_mask = 2
+spring_length = 4.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1357636668]
+current = true
