@@ -1,14 +1,30 @@
 [gd_scene format=3 uid="uid://bh26dtb1o7ttm"]
 
 [ext_resource type="Script" uid="uid://d0r4srh2q0svt" path="res://orchestrations/nivel_teste.torch" id="1_07h4c"]
+[ext_resource type="PackedScene" uid="uid://cfkkylcqls1i8" path="res://scenes/characters/Player.tscn" id="2_ywr8x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wyeb1"]
+size = Vector3(20, 1, 20)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ry7xg"]
+size = Vector2(20, 20)
 
 [node name="NivelTeste" type="Node3D" unique_id=1892972692]
 script = ExtResource("1_07h4c")
 
-[node name="Chao" type="MeshInstance3D" parent="." unique_id=1141070325]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=53104355]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1856965032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38197732, 0)
+shape = SubResource("BoxShape3D_wyeb1")
+
+[node name="Chao" type="MeshInstance3D" parent="StaticBody3D" unique_id=1141070325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025622606, 0)
 mesh = SubResource("PlaneMesh_ry7xg")
 
 [node name="LuzPrincipal" type="DirectionalLight3D" parent="." unique_id=595125852]
 transform = Transform3D(0.8528833, 0.42450574, -0.3039489, 0, 0.5821643, 0.8130712, 0.5221016, -0.6934548, 0.49651825, 0, 1.003488, 0)
+
+[node name="Player" parent="." unique_id=1437837684 instance=ExtResource("2_ywr8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17072392, 0.5590733, -0.36788702)
