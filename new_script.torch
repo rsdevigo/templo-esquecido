@@ -664,7 +664,7 @@ pin_data = Array[Dictionary]([{
 guid = "8FE5F152-D546-40E7-A4A5-9350140EED13"
 id = 28
 size = Vector2(149, 66)
-position = Vector2(80, -20)
+position = Vector2(60, 40)
 pin_data = Array[Dictionary]([{
 "pin_name": &"variable",
 "type": 5,
@@ -711,7 +711,7 @@ method = {
 chain = false
 id = 30
 size = Vector2(152, 66)
-position = Vector2(580, 260)
+position = Vector2(520, 260)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
