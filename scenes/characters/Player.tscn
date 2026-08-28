@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://damnte88bupil" path="res://orchestrations/player.torch" id="1_pq8s5"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wyeb1"]
-radius = 0.25
-height = 1.0
+[sub_resource type="BoxShape3D" id="BoxShape3D_aypup"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_miirx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh5tb"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.49427372, 0.18343478, 0.17204428, 1)
+metallic_specular = 0.0
+roughness = 0.0
 
 [node name="Player" type="CharacterBody3D" unique_id=1437837684]
 script = ExtResource("1_pq8s5")
@@ -21,7 +26,8 @@ spring_length = 4.0
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296981706]
-shape = SubResource("CapsuleShape3D_wyeb1")
+shape = SubResource("BoxShape3D_aypup")
 
 [node name="Malha" type="MeshInstance3D" parent="." unique_id=686209405]
 mesh = SubResource("BoxMesh_miirx")
+surface_material_override/0 = SubResource("StandardMaterial3D_sh5tb")

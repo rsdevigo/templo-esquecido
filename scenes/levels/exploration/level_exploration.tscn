@@ -2,29 +2,50 @@
 
 [ext_resource type="Script" uid="uid://d0r4srh2q0svt" path="res://orchestrations/nivel_teste.torch" id="1_07h4c"]
 [ext_resource type="PackedScene" uid="uid://cfkkylcqls1i8" path="res://scenes/characters/Player.tscn" id="2_ywr8x"]
+[ext_resource type="MeshLibrary" uid="uid://kyisblnl2rqa" path="res://resources/dungeon.tres" id="4_4kn3d"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wyeb1"]
-size = Vector3(20, 1, 20)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sh5tb"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_bottom_color = Color(0.28340083, 0.31872794, 0.43225586, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_ry7xg"]
-size = Vector2(20, 20)
+[sub_resource type="Sky" id="Sky_4kn3d"]
+sky_material = SubResource("ProceduralSkyMaterial_sh5tb")
+
+[sub_resource type="Environment" id="Environment_aypup"]
+background_mode = 2
+sky = SubResource("Sky_4kn3d")
+ambient_light_source = 3
+ambient_light_color = Color(0.6702083, 0.48103267, 0.9060688, 1)
+ambient_light_energy = 2.66
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_intensity = 1.85
+volumetric_fog_density = 0.1231
+volumetric_fog_albedo = Color(0.42631996, 0.8532564, 0.48731095, 1)
 
 [node name="NivelTeste" type="Node3D" unique_id=1892972692]
 script = ExtResource("1_07h4c")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=53104355]
-collision_layer = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1856965032]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38197732, 0)
-shape = SubResource("BoxShape3D_wyeb1")
-
-[node name="Chao" type="MeshInstance3D" parent="StaticBody3D" unique_id=1141070325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025622606, 0)
-mesh = SubResource("PlaneMesh_ry7xg")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=495474537]
+environment = SubResource("Environment_aypup")
 
 [node name="LuzPrincipal" type="DirectionalLight3D" parent="." unique_id=595125852]
-transform = Transform3D(0.8528833, 0.42450574, -0.3039489, 0, 0.5821643, 0.8130712, 0.5221016, -0.6934548, 0.49651825, 0, 1.003488, 0)
+transform = Transform3D(0.021605788, 0.6183706, 0.7855892, -0.7651242, -0.49555197, 0.41111293, 0.64352053, -0.60995543, 0.46242377, 0, 1.003488, 0)
+light_color = Color(0.20718542, 0.59495944, 0.70685303, 1)
+light_energy = 1.889
+shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1437837684 instance=ExtResource("2_ywr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17072392, 0.5590733, -0.36788702)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42305756, 2.7317805, -1.552433)
+collision_mask = 3
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1836320338]
+mesh_library = ExtResource("4_4kn3d")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+collision_layer = 2
+data = {
+"cells": PackedInt32Array(0, 65534, 22, 1, 65534, 22, 2, 65534, 22, 3, 65534, 22, 65535, 65534, 22, 4, 65534, 22, 65534, 65534, 18, 65534, 65535, 655370, 65535, 65535, 655370, 0, 65535, 655370, 1, 65535, 9, 2, 65535, 655370, 2, 0, 10, 1, 0, 10, 0, 0, 10, 65534, 0, 10, 65535, 0, 9, 5, 65534, 22, 2, 1, 10, 1, 1, 655369, 65534, 1, 10, 65535, 1, 10, 0, 1, 10, 2, 2, 10, 1, 2, 22, 0, 2, 10, 65535, 2, 10, 65534, 2, 10, 3, 65535, 1441802, 3, 0, 9, 3, 1, 1441802, 3, 2, 1441801, 4, 2, 1441802, 5, 1, 1441802, 5, 0, 1441802, 5, 65535, 10, 4, 65535, 1441802, 4, 0, 1441802, 5, 2, 1441802, 4, 1, 1441801, 6, 65534, 8, 6, 65535, 1441814, 6, 0, 1441814, 6, 1, 1441814, 6, 2, 1441814, 65534, 65533, 8, 65535, 65533, 8, 0, 65533, 8, 1, 65533, 8, 1, 65532, 8, 2, 65532, 8, 3, 65532, 8, 4, 65532, 8, 6, 65533, 8, 5, 65533, 8, 4, 65533, 8, 3, 65533, 8, 2, 65533, 8, 0, 65532, 8, 65535, 65532, 8, 65534, 65532, 8, 5, 65532, 8, 6, 65532, 8, 7, 65532, 8, 7, 65533, 8, 8, 65533, 8, 8, 65534, 8, 8, 65535, 8, 7, 65534, 8, 8, 0, 8, 7, 0, 8, 8, 1, 8, 8, 2, 1048584, 7, 2, 8, 7, 65535, 8, 7, 1, 8, 8, 65532, 8, 1, 3, 1048585, 2, 3, 1048585, 3, 3, 1048585, 0, 3, 1048586, 4, 3, 1048586, 2, 4, 1048591, 3, 4, 1048601, 4, 4, 1048601, 5, 4, 1441814, 5, 3, 1441814, 8, 3, 1048584, 7, 3, 1048584, 6, 3, 1441814, 7, 4, 1048584, 8, 4, 1048584, 6, 4, 1048584, 5, 5, 1048584, 4, 5, 1048584, 3, 5, 1048584)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
