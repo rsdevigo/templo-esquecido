@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://1qogqc0cb7uv" path="res://assets/dungeon/weapon-sword.glb" id="28_28kx8"]
 [ext_resource type="PackedScene" uid="uid://dwmkq8djah1ju" path="res://assets/dungeon/wood-structure.glb" id="29_k8s8s"]
 [ext_resource type="PackedScene" uid="uid://cmlvlvcrm6pwd" path="res://assets/dungeon/wood-support.glb" id="30_522ga"]
+[ext_resource type="PackedScene" uid="uid://cvukirol07d1l" path="res://assets/dungeon/dirt_02.glb" id="31_dg5bn"]
 
 [node name="Node3D" type="Node3D" unique_id=360453994]
 
@@ -58,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
 
 [node name="dirt2" parent="." unique_id=377434815 instance=ExtResource("9_i0wm7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134, 0, 0)
 
 [node name="floor-detail2" parent="." unique_id=1255357047 instance=ExtResource("10_e3qlq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
@@ -122,3 +123,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
 
 [node name="wood-support2" parent="." unique_id=1692724709 instance=ExtResource("30_522ga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13362408, 0, 0.3310907)
+
+[node name="dirt_02" parent="." unique_id=632692440 instance=ExtResource("31_dg5bn")]

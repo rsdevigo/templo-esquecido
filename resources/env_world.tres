@@ -9,11 +9,11 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_4kn3d")
 
 [resource]
-background_mode = 2
-background_color = Color(0.43456304, 0.4851302, 0.74415725, 1)
+background_mode = 1
 sky = SubResource("Sky_aypup")
 ambient_light_source = 2
-ambient_light_color = Color(0.3765798, 0.47221434, 0.54862535, 1)
+ambient_light_color = Color(0.28436002, 0.23176178, 0.29399848, 1)
+ambient_light_energy = 0.53
 tonemap_mode = 2
 tonemap_exposure = 0.9
 ssao_enabled = true
@@ -26,6 +26,9 @@ glow_enabled = true
 glow_levels/2 = 0.6
 glow_levels/3 = 0.6
 glow_intensity = 2.0
+fog_light_color = Color(0.5393985, 0.27597153, 0.03768445, 1)
+fog_light_energy = 0.94
+volumetric_fog_length = 2.0
 adjustment_enabled = true
 adjustment_brightness = 0.9
 adjustment_contrast = 1.1

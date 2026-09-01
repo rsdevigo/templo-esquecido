@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://caerw4bxrwnhf"
-path="res://.godot/imported/column.glb-435ded34a00452685efaeadc8d660f4f.scn"
+uid="uid://cvukirol07d1l"
+path="res://.godot/imported/dirt_02.glb-de3fab89d1e50d6e77675bcd03623d50.scn"
 
 [deps]
 
-source_file="res://assets/dungeon/column.glb"
-dest_files=["res://.godot/imported/column.glb-435ded34a00452685efaeadc8d660f4f.scn"]
+source_file="res://assets/dungeon/dirt_02.glb"
+dest_files=["res://.godot/imported/dirt_02.glb-de3fab89d1e50d6e77675bcd03623d50.scn"]
 
 [params]
 
@@ -26,7 +26,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -41,7 +41,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:column": {
+"PATH:dirt_001": {
 "generate/physics": true,
 "physics/shape_type": 1
 }

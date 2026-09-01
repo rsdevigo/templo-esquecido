@@ -1,33 +1,27 @@
 [gd_scene format=3 uid="uid://cfkkylcqls1i8"]
 
 [ext_resource type="Script" uid="uid://damnte88bupil" path="res://orchestrations/player.torch" id="1_pq8s5"]
+[ext_resource type="PackedScene" uid="uid://6lxs2enjioph" path="res://assets/dungeon/character-human.glb" id="2_gin2a"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_aypup"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_miirx"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh5tb"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_color = Color(0.49427372, 0.18343478, 0.17204428, 1)
-metallic_specular = 0.0
-roughness = 0.0
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kn3d"]
+radius = 0.125
+height = 0.6628418
 
 [node name="Player" type="CharacterBody3D" unique_id=1437837684]
 script = ExtResource("1_pq8s5")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=2090051641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=1167424646]
 collision_mask = 2
-spring_length = 4.0
+spring_length = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1357636668]
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296981706]
-shape = SubResource("BoxShape3D_aypup")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026550293, 0.33382416, -0.022460938)
+shape = SubResource("CapsuleShape3D_4kn3d")
 
-[node name="Malha" type="MeshInstance3D" parent="." unique_id=686209405]
-mesh = SubResource("BoxMesh_miirx")
-surface_material_override/0 = SubResource("StandardMaterial3D_sh5tb")
+[node name="character-human2" parent="." unique_id=48455416 instance=ExtResource("2_gin2a")]
