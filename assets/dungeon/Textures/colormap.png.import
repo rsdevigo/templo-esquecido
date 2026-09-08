@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtwav0yme8rfj"
-path.s3tc="res://.godot/imported/colormap.png-431bfb3d1d06bcbeed782d079ce52db2.s3tc.ctex"
+path.bptc="res://.godot/imported/colormap.png-431bfb3d1d06bcbeed782d079ce52db2.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,16 +12,16 @@ metadata={
 [deps]
 
 source_file="res://assets/dungeon/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-431bfb3d1d06bcbeed782d079ce52db2.s3tc.ctex"]
+dest_files=["res://.godot/imported/colormap.png-431bfb3d1d06bcbeed782d079ce52db2.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
-compress/hdr_compression=1
+compress/hdr_compression=2
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
