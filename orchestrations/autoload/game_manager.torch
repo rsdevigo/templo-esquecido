@@ -1,0 +1,274 @@
+[orchestration type="OScript" load_steps=13 format=4 uid="uid://dt3tmq5tceggq"]
+
+[obj type="OScriptFunction" id="OScriptFunction_fdhbi"]
+guid = "459EE884-94B2-4E3F-9483-EA3504EBB85B"
+method = {
+"name": &"spawn_player"
+}
+user_defined = true
+id = 9
+
+[obj type="OScriptGraph" id="OScriptGraph_10o0e"]
+graph_name = &"EventGraph"
+flags = 8
+
+[obj type="OScriptGraph" id="OScriptGraph_unoxy"]
+graph_name = &"spawn_player"
+flags = 22
+nodes = Array[int]([9, 11, 12, 13, 14, 15, 16, 17])
+functions = Array[int]([9])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_6jpay"]
+function_id = "459EE884-94B2-4E3F-9483-EA3504EBB85B"
+id = 9
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeSceneTree" id="OScriptNodeSceneTree_fdhbi"]
+id = 11
+position = Vector2(-100, 140)
+pin_data = Array[Dictionary]([{
+"pin_name": &"scene_tree",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "SceneTree"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_unoxy"]
+function_name = &"get_first_node_in_group"
+target_class_name = "SceneTree"
+target_type = 24
+flags = 520
+method = {
+"name": &"get_first_node_in_group",
+"return": {
+"type": 24,
+"class_name": &"Node"
+},
+"args": [{
+"name": &"group",
+"type": 21
+}]
+}
+chain = false
+id = 12
+size = Vector2(305, 148)
+position = Vector2(260, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "SceneTree",
+"target_class": "SceneTree"
+}, {
+"pin_name": &"group",
+"type": 21,
+"flags": 2,
+"dv": "player"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"return_value",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"label": "Node",
+"target_class": "Node"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_6jpay"]
+function_name = &"get_first_node_in_group"
+target_class_name = "SceneTree"
+target_type = 24
+flags = 520
+method = {
+"name": &"get_first_node_in_group",
+"return": {
+"type": 24,
+"class_name": &"Node"
+},
+"args": [{
+"name": &"group",
+"type": 21
+}]
+}
+chain = false
+id = 13
+size = Vector2(305, 148)
+position = Vector2(1040, 100)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "SceneTree",
+"target_class": "SceneTree"
+}, {
+"pin_name": &"group",
+"type": 21,
+"flags": 2,
+"dv": "player_start"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"return_value",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"label": "Node",
+"target_class": "Node"
+}])
+
+[obj type="OScriptNodeTypeCast" id="OScriptNodeTypeCast_hvyca"]
+type = "Node3D"
+id = 14
+position = Vector2(640, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"instance",
+"type": 24,
+"flags": 2,
+"target_class": "Object"
+}, {
+"pin_name": &"yes",
+"dir": 1,
+"flags": 516
+}, {
+"pin_name": &"no",
+"dir": 1,
+"flags": 516
+}, {
+"pin_name": &"output",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "as Node3D",
+"target_class": "Node3D"
+}])
+
+[obj type="OScriptNodeTypeCast" id="OScriptNodeTypeCast_fdhbi"]
+type = "Node3D"
+id = 15
+position = Vector2(1460, 100)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"instance",
+"type": 24,
+"flags": 2,
+"target_class": "Object"
+}, {
+"pin_name": &"yes",
+"dir": 1,
+"flags": 516
+}, {
+"pin_name": &"no",
+"dir": 1,
+"flags": 516
+}, {
+"pin_name": &"output",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "as Node3D",
+"target_class": "Node3D"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_hvyca"]
+function_name = &"set_global_position"
+target_class_name = "Node3D"
+target_type = 24
+flags = 520
+method = {
+"name": &"set_global_position",
+"args": [{
+"name": &"position",
+"type": 9
+}]
+}
+chain = false
+id = 16
+size = Vector2(321, 187)
+position = Vector2(2100, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node3D",
+"target_class": "Node3D"
+}, {
+"pin_name": &"position",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_raiae"]
+function_name = &"get_global_position"
+target_class_name = "Node3D"
+target_type = 24
+flags = 522
+method = {
+"name": &"get_global_position",
+"return": {
+"type": 9
+},
+"flags": 5
+}
+chain = false
+id = 17
+size = Vector2(220, 76)
+position = Vector2(1820, 340)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node3D",
+"target_class": "Node3D"
+}, {
+"pin_name": &"return_value",
+"type": 9,
+"dir": 1,
+"flags": 1026
+}])
+
+[obj type="OScriptVariable" id="OScriptVariable_lgq7w"]
+name = "teasure_key_picked"
+category = "Default"
+info = {
+"name": &"teasure_key_picked",
+"type": 1
+}
+default_value = false
+
+[resource]
+base_type = &"Node"
+description = "Base template for Node with default Godot cycle methods."
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_lgq7w")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_fdhbi")])
+connections = Array[int]([9, 0, 12, 0, 14, 0, 13, 0, 12, 0, 14, 0, 13, 0, 15, 0, 15, 0, 16, 0, 15, 2, 17, 0, 11, 0, 12, 1, 11, 0, 13, 1, 12, 1, 14, 1, 13, 1, 15, 1, 14, 2, 16, 1, 17, 0, 16, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_6jpay"), SubResource("OScriptNodeSceneTree_fdhbi"), SubResource("OScriptNodeCallMemberFunction_unoxy"), SubResource("OScriptNodeCallMemberFunction_6jpay"), SubResource("OScriptNodeTypeCast_hvyca"), SubResource("OScriptNodeTypeCast_fdhbi"), SubResource("OScriptNodeCallMemberFunction_hvyca"), SubResource("OScriptNodeCallMemberFunction_raiae")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e"), SubResource("OScriptGraph_unoxy")])

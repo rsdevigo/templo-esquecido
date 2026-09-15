@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://pjk7td3gxvol"]
+
+[node name="LevelTestePersistencia" type="Node3D" unique_id=2071426839]
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1916968807]
+text = "Cena de teste"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1573462044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.075404)

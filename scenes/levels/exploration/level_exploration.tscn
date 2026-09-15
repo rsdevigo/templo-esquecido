@@ -16,10 +16,12 @@ script = ExtResource("1_07h4c")
 environment = ExtResource("2_4kn3d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2032164830]
-transform = Transform3D(-0.29872385, -0.7012015, -0.6473644, -0.74593264, -0.25155878, 0.61668706, -0.59527206, 0.6671093, -0.44790223, 0, 0, 0)
-light_energy = 1.179
+transform = Transform3D(-0.7891033, -0.6142569, 0.002143055, 0.009271472, -0.0084218765, 0.99992156, -0.61419076, 0.78906137, 0.012340772, 0, 3.7222688, 0)
+light_color = Color(0.18123479, 0.3325136, 0.17016561, 1)
+light_volumetric_fog_energy = 1.97
 shadow_enabled = true
 shadow_opacity = 0.75
+directional_shadow_blend_splits = true
 sky_mode = 1
 
 [node name="Dungeon" type="Node3D" parent="." unique_id=1853545186]
@@ -132,8 +134,35 @@ light_specular = 0.0
 shadow_enabled = true
 omni_range = 3.6479645
 
-[node name="Player" parent="." unique_id=1437837684 instance=ExtResource("2_ywr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.933838, 0.13195574, 2.7406974)
+[node name="OmniLight3D10" type="OmniLight3D" parent="Dungeon" unique_id=1766398756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.608727, 2.8982816, 5.0025506)
+light_color = Color(0.6243829, 0.33141842, 0.20874357, 1)
+light_energy = 1.491
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 3.6479645
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Dungeon" unique_id=1597854608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.66409, 3.8339033, 4.0113616)
+light_color = Color(0.6243829, 0.33141842, 0.20874357, 1)
+light_energy = 1.491
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 3.6479645
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Dungeon" unique_id=938956374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.66409, 4.4815674, -2.024506)
+light_color = Color(0.6243829, 0.33141842, 0.20874357, 1)
+light_energy = 1.491
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 3.6479645
+
+[node name="Player" parent="." unique_id=1437837684 groups=["player"] instance=ExtResource("2_ywr8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.06515, 3.61595, 12.75568)
 collision_mask = 3
 
 [node name="coin2" parent="." unique_id=802913641 instance=ExtResource("5_aypup")]
@@ -159,3 +188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.535267, 0, -11.50696)
 
 [node name="key2" parent="." unique_id=862625106 instance=ExtResource("8_unoxy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.016003, 0, -11.92405)
+
+[node name="PlayerStart" type="Marker3D" parent="." unique_id=1668260803 groups=["player", "player_start"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6512177, 0.7068858, 4.5260806)
+gizmo_extents = 0.54

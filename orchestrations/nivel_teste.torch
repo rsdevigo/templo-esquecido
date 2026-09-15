@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=5 format=4 uid="uid://d0r4srh2q0svt"]
+[orchestration type="OScript" load_steps=7 format=4 uid="uid://d0r4srh2q0svt"]
 
 [obj type="OScriptFunction" id="OScriptFunction_orolp"]
 guid = "03EF4541-DBD5-4DD3-9804-7D81B470E0DA"
@@ -11,7 +11,7 @@ id = 0
 [obj type="OScriptGraph" id="OScriptGraph_10o0e"]
 graph_name = &"EventGraph"
 flags = 8
-nodes = Array[int]([0, 2])
+nodes = Array[int]([0, 2, 3, 4])
 functions = Array[int]([0])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_10o0e"]
@@ -26,7 +26,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodePrintString" id="OScriptNodePrintString_6176b"]
 id = 2
-position = Vector2(700, 480)
+position = Vector2(440, 480)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -62,10 +62,50 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
+[obj type="OScriptNodeAutoload" id="OScriptNodeAutoload_fdhbi"]
+autoload = "GameManager"
+id = 3
+position = Vector2(520, 360)
+pin_data = Array[Dictionary]([{
+"pin_name": &"autoload",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "GameManager",
+"target_class": "Node"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_unoxy"]
+function_name = &"spawn_player"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"spawn_player"
+}
+chain = false
+id = 4
+size = Vector2(175, 111)
+position = Vector2(900, 480)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
 [resource]
 base_type = &"Node"
 description = "Base template for Node with default Godot cycle methods."
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_orolp")])
-connections = Array[int]([0, 0, 2, 0])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_10o0e"), SubResource("OScriptNodePrintString_6176b")])
+connections = Array[int]([0, 0, 2, 0, 2, 0, 4, 0, 3, 0, 4, 1])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_10o0e"), SubResource("OScriptNodePrintString_6176b"), SubResource("OScriptNodeAutoload_fdhbi"), SubResource("OScriptNodeCallMemberFunction_unoxy")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e")])
