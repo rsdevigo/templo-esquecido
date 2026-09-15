@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuauica60ufne"]
+
+[ext_resource type="Texture2D" uid="uid://dtwav0yme8rfj" path="res://assets/dungeon/Textures/colormap.png" id="1_72qa0"]
+
+[resource]
+resource_name = "colormap"
+cull_mode = 2
+albedo_color = Color(0.24313726, 0.92941177, 0.13725491, 1)
+albedo_texture = ExtResource("1_72qa0")
+metadata/_gltf_primary_texture_coord = 0
