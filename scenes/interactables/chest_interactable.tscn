@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cxd53l7i0gpun"]
+
+[ext_resource type="PackedScene" uid="uid://bid8xsehsgrsl" path="res://assets/dungeon/chest.glb" id="1_fx1u7"]
+[ext_resource type="Script" uid="uid://3dyc21n2ds11" path="res://orchestrations/interactable_object.torch" id="2_0ikqe"]
+[ext_resource type="Script" uid="uid://brydbx18brqyy" path="res://orchestrations/chest_interactable.torch" id="2_kdr5v"]
+
+[node name="ChestInteractable" unique_id=1615743445 instance=ExtResource("1_fx1u7")]
+script = ExtResource("2_kdr5v")
+
+[node name="lid" parent="chest" parent_id_path=PackedInt32Array(1486986595) index="0" unique_id=1474128375]
+transform = Transform3D(1, 0, 0, 0, 1, 1.7439346e-16, 0, -1.7439346e-16, 1, -3.7252983e-09, 0.2, -0.2)
+
+[node name="StaticBody3D" parent="chest/lid" index="0" unique_id=497858334]
+collision_layer = 2
+
+[node name="StaticBody3D" parent="chest" parent_id_path=PackedInt32Array(1486986595) index="1" unique_id=884018663]
+collision_layer = 2
+script = ExtResource("2_0ikqe")
+
+[connection signal="has_been_interacted" from="chest/StaticBody3D" to="." method="_on_try_open_chest"]

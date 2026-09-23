@@ -321,7 +321,6 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2,
 "target_class": "InputEvent",
-"dv": null,
 "hint": 17,
 "hint_string": "InputEvent"
 }])
@@ -1716,7 +1715,6 @@ pin_data = Array[Dictionary]([{
 "flags": 2050,
 "label": "InputEvent",
 "target_class": "InputEvent",
-"dv": null,
 "hint": 17,
 "hint_string": "InputEvent"
 }, {
@@ -1742,8 +1740,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodeAutoload" id="OScriptNodeAutoload_ksfcb"]
@@ -1756,8 +1753,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "SaveManager",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_0dosr"]
@@ -1780,8 +1776,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"ExecOut",
 "dir": 1,
@@ -1847,8 +1842,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"itens_coletados",
 "type": 2,

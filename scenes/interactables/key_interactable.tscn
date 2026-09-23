@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cj4jk1igvbuea"]
+
+[ext_resource type="PackedScene" uid="uid://dkr8oaj03uj7b" path="res://assets/dungeon/key.glb" id="1_jd7qh"]
+[ext_resource type="Script" uid="uid://3dyc21n2ds11" path="res://orchestrations/interactable_object.torch" id="2_6k7p2"]
+[ext_resource type="Script" uid="uid://bcld4uacf154r" path="res://orchestrations/key.torch" id="2_p7jcg"]
+
+[node name="KeyInteractable" unique_id=1197001486 instance=ExtResource("1_jd7qh")]
+script = ExtResource("2_p7jcg")
+
+[node name="StaticBody3D" parent="key" parent_id_path=PackedInt32Array(1460746184) index="0" unique_id=1987350991]
+collision_layer = 2
+script = ExtResource("2_6k7p2")
+
+[connection signal="has_been_interacted" from="key/StaticBody3D" to="." method="_collect_key"]
