@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d3nem1exo5aw7"]
+
+[ext_resource type="Script" uid="uid://ct7er4kg0wjjj" path="res://orchestrations/player_2.torch" id="1_kn5ea"]
+[ext_resource type="PackedScene" uid="uid://6lxs2enjioph" path="res://assets/dungeon/character-human.glb" id="1_wlc0w"]
+[ext_resource type="PackedScene" uid="uid://b3amfukglf6v6" path="res://scenes/characters/interaction_component.tscn" id="2_3tann"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wyeb1"]
+radius = 0.17285156
+height = 0.65997314
+
+[node name="Player" type="CharacterBody3D" unique_id=1911049954]
+script = ExtResource("1_kn5ea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=64654470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32833862, 0)
+shape = SubResource("CapsuleShape3D_wyeb1")
+
+[node name="character-human2" parent="." unique_id=48455416 instance=ExtResource("1_wlc0w")]
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1928209612]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=248335606]
+collision_mask = 2
+spring_length = 4.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1658317401]
+current = true
+
+[node name="InteractionComponent" parent="CameraPivot" unique_id=1070521270 instance=ExtResource("2_3tann")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31485528, 0)

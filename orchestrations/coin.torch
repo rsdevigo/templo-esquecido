@@ -1,0 +1,62 @@
+[orchestration type="OScript" load_steps=6 format=4 uid="uid://bw5gdrbp73a6c"]
+
+[obj type="OScriptFunction" id="OScriptFunction_74jdj"]
+guid = "FDD94941-8CA6-4765-9F62-AD2AB300F632"
+method = {
+"name": &"_collect_coin"
+}
+user_defined = true
+id = 0
+
+[obj type="OScriptGraph" id="OScriptGraph_orolp"]
+graph_name = &"EventGraph"
+flags = 8
+
+[obj type="OScriptGraph" id="OScriptGraph_lbqcc"]
+graph_name = &"_collect_coin"
+flags = 22
+nodes = Array[int]([0, 1])
+functions = Array[int]([0])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_m32i6"]
+function_id = "FDD94941-8CA6-4765-9F62-AD2AB300F632"
+id = 0
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_74jdj"]
+function_name = &"queue_free"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"queue_free"
+}
+chain = false
+id = 1
+position = Vector2(320, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[resource]
+base_type = &"Node3D"
+brief_description = "Empty template suitable for all Objects"
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_74jdj")])
+connections = Array[int]([0, 0, 1, 0])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_m32i6"), SubResource("OScriptNodeCallMemberFunction_74jdj")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_orolp"), SubResource("OScriptGraph_lbqcc")])

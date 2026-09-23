@@ -1,0 +1,112 @@
+[orchestration type="OScript" load_steps=8 format=4 uid="uid://bcld4uacf154r"]
+
+[obj type="OScriptFunction" id="OScriptFunction_p7jcg"]
+guid = "269600BC-A34F-4195-A5DF-FB42F62E1453"
+method = {
+"name": &"_collect_key"
+}
+user_defined = true
+id = 0
+
+[obj type="OScriptGraph" id="OScriptGraph_orolp"]
+graph_name = &"EventGraph"
+flags = 8
+
+[obj type="OScriptGraph" id="OScriptGraph_q4qkg"]
+graph_name = &"_collect_key"
+flags = 22
+nodes = Array[int]([0, 1, 2, 3])
+functions = Array[int]([0])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_a3eps"]
+function_id = "269600BC-A34F-4195-A5DF-FB42F62E1453"
+id = 0
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeAutoload" id="OScriptNodeAutoload_p7jcg"]
+autoload = "GameManager"
+id = 1
+position = Vector2(60, 160)
+pin_data = Array[Dictionary]([{
+"pin_name": &"autoload",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "GameManager",
+"target_class": "Node"
+}])
+
+[obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_q4qkg"]
+mode = 1
+target_class = &"Node"
+property_name = &"teasure_key_picked"
+property = {
+"name": &"teasure_key_picked",
+"type": 1,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 4096
+}
+id = 2
+size = Vector2(292, 146)
+position = Vector2(420, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"teasure_key_picked",
+"type": 1,
+"flags": 2,
+"dv": true,
+"usage": 4096
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_a3eps"]
+function_name = &"queue_free"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"queue_free"
+}
+chain = false
+id = 3
+size = Vector2(156, 111)
+position = Vector2(900, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[resource]
+base_type = &"Node3D"
+brief_description = "Empty template suitable for all Objects"
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_p7jcg")])
+connections = Array[int]([0, 0, 2, 0, 2, 0, 3, 0, 1, 0, 2, 1])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_a3eps"), SubResource("OScriptNodeAutoload_p7jcg"), SubResource("OScriptNodePropertySet_q4qkg"), SubResource("OScriptNodeCallMemberFunction_a3eps")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_orolp"), SubResource("OScriptGraph_q4qkg")])

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://damnte88bupil" path="res://orchestrations/player.torch" id="1_pq8s5"]
 [ext_resource type="PackedScene" uid="uid://6lxs2enjioph" path="res://assets/dungeon/character-human.glb" id="2_gin2a"]
+[ext_resource type="PackedScene" uid="uid://b3amfukglf6v6" path="res://scenes/characters/interaction_component.tscn" id="3_7n8ao"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kn3d"]
 radius = 0.125
@@ -19,6 +20,9 @@ spring_length = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1357636668]
 current = true
+
+[node name="InteractionComponent" parent="CameraPivot" unique_id=1070521270 instance=ExtResource("3_7n8ao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17026699, -0.14676236)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296981706]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026550293, 0.33382416, -0.022460938)

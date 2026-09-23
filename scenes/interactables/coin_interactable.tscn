@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bie5wq8gi1v3i"]
+
+[ext_resource type="PackedScene" uid="uid://c3dh7k70efekh" path="res://assets/dungeon/coin.glb" id="1_4d2bf"]
+[ext_resource type="Script" uid="uid://bw5gdrbp73a6c" path="res://orchestrations/coin.torch" id="2_vtjxe"]
+[ext_resource type="Script" uid="uid://3dyc21n2ds11" path="res://orchestrations/interactable_object.torch" id="3_74jdj"]
+
+[node name="CoinInteractable" unique_id=710647029 instance=ExtResource("1_4d2bf")]
+script = ExtResource("2_vtjxe")
+
+[node name="StaticBody3D" parent="coin" parent_id_path=PackedInt32Array(943586637) index="0" unique_id=1904458543]
+script = ExtResource("3_74jdj")
+
+[connection signal="has_been_interacted" from="coin/StaticBody3D" to="." method="_collect_coin"]

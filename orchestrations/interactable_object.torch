@@ -1,0 +1,56 @@
+[orchestration type="OScript" load_steps=7 format=4 uid="uid://3dyc21n2ds11"]
+
+[obj type="OScriptFunction" id="OScriptFunction_vtjxe"]
+guid = "EE4AA1E4-1A0B-4998-8938-B9ECA7ABDE9D"
+method = {
+"name": &"interact"
+}
+user_defined = true
+id = 0
+
+[obj type="OScriptGraph" id="OScriptGraph_10o0e"]
+graph_name = &"EventGraph"
+flags = 8
+
+[obj type="OScriptGraph" id="OScriptGraph_74jdj"]
+graph_name = &"interact"
+flags = 22
+nodes = Array[int]([0, 1])
+functions = Array[int]([0])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_lbqcc"]
+function_id = "EE4AA1E4-1A0B-4998-8938-B9ECA7ABDE9D"
+id = 0
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeEmitSignal" id="OScriptNodeEmitSignal_vtjxe"]
+signal_name = "has_been_interacted"
+id = 1
+position = Vector2(280, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptSignal" id="OScriptSignal_vtjxe"]
+method = {
+"name": &"has_been_interacted"
+}
+signal_name = &"has_been_interacted"
+
+[resource]
+base_type = &"StaticBody3D"
+description = "Base template for Node with default Godot cycle methods."
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_vtjxe")])
+signals = Array[OScriptSignal]([SubResource("OScriptSignal_vtjxe")])
+connections = Array[int]([0, 0, 1, 0])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_lbqcc"), SubResource("OScriptNodeEmitSignal_vtjxe")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e"), SubResource("OScriptGraph_74jdj")])
