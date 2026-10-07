@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfgq4sqgy48ly"]
+
+[ext_resource type="Script" uid="uid://cj7ehmme2e2bt" path="res://scripts/resources/item_data.gd" id="1_d7esm"]
+
+[resource]
+script = ExtResource("1_d7esm")
+nome = "Moeda"
+valor = 1.0
+descricao = "Moeda de grande valor."
+metadata/_custom_type_script = "uid://cj7ehmme2e2bt"
