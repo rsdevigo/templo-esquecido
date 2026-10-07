@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=8 format=4 uid="uid://bcld4uacf154r"]
+[orchestration type="OScript" load_steps=9 format=4 uid="uid://bcld4uacf154r"]
 
 [obj type="OScriptFunction" id="OScriptFunction_p7jcg"]
 guid = "269600BC-A34F-4195-A5DF-FB42F62E1453"
@@ -87,7 +87,7 @@ method = {
 chain = false
 id = 3
 size = Vector2(156, 111)
-position = Vector2(900, 0)
+position = Vector2(840, 0)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -103,9 +103,20 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
+[obj type="OScriptVariable" id="OScriptVariable_p7jcg"]
+name = "item_data"
+category = "Default"
+exported = true
+info = {
+"name": &"item_data",
+"type": 24,
+"class_name": &"ItemData"
+}
+
 [resource]
 base_type = &"Node3D"
 brief_description = "Empty template suitable for all Objects"
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_p7jcg")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_p7jcg")])
 connections = Array[int]([0, 0, 2, 0, 2, 0, 3, 0, 1, 0, 2, 1])
 nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_a3eps"), SubResource("OScriptNodeAutoload_p7jcg"), SubResource("OScriptNodePropertySet_q4qkg"), SubResource("OScriptNodeCallMemberFunction_a3eps")])

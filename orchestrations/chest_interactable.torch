@@ -37,8 +37,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "GameManager",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_opyw1"]
@@ -61,8 +60,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"teasure_key_picked",
 "type": 1,
@@ -105,8 +103,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AnimationPlayer",
-"dv": null
+"target_class": "AnimationPlayer"
 }])
 metadata/__base_node_relative = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
 
@@ -145,8 +142,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AnimationPlayer",
-"target_class": "AnimationPlayer",
-"dv": null
+"target_class": "AnimationPlayer"
 }, {
 "pin_name": &"name",
 "type": 21,
