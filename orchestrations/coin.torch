@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=6 format=4 uid="uid://bw5gdrbp73a6c"]
+[orchestration type="OScript" load_steps=10 format=4 uid="uid://bw5gdrbp73a6c"]
 
 [obj type="OScriptFunction" id="OScriptFunction_74jdj"]
 guid = "FDD94941-8CA6-4765-9F62-AD2AB300F632"
@@ -15,12 +15,13 @@ flags = 8
 [obj type="OScriptGraph" id="OScriptGraph_lbqcc"]
 graph_name = &"_collect_coin"
 flags = 22
-nodes = Array[int]([0, 1])
+nodes = Array[int]([0, 1, 2, 3, 4])
 functions = Array[int]([0])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_m32i6"]
 function_id = "FDD94941-8CA6-4765-9F62-AD2AB300F632"
 id = 0
+position = Vector2(-20, 0)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecOut",
 "dir": 1,
@@ -37,7 +38,7 @@ method = {
 }
 chain = false
 id = 1
-position = Vector2(320, 0)
+position = Vector2(660, 40)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -53,10 +54,90 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
+[obj type="OScriptNodeAutoload" id="OScriptNodeAutoload_74jdj"]
+autoload = "SaveManager"
+id = 2
+position = Vector2(-60, 220)
+pin_data = Array[Dictionary]([{
+"pin_name": &"autoload",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "SaveManager",
+"target_class": "Node",
+"dv": null
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_lbqcc"]
+function_name = &"coletar_item"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"coletar_item",
+"args": [{
+"name": &"item",
+"type": 24,
+"class_name": &"ItemData",
+"usage": 0
+}]
+}
+chain = false
+id = 3
+size = Vector2(166, 146)
+position = Vector2(380, 40)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"item",
+"type": 24,
+"flags": 2,
+"target_class": "ItemData",
+"dv": null,
+"usage": 0
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_74jdj"]
+variable_name = &"item_data"
+id = 4
+position = Vector2(-33.97005844116211, 108.09727478027344)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "item_data",
+"target_class": "ItemData",
+"dv": null
+}])
+
+[obj type="OScriptVariable" id="OScriptVariable_m32i6"]
+name = "item_data"
+category = "Default"
+exported = true
+info = {
+"name": &"item_data",
+"type": 24,
+"class_name": &"ItemData"
+}
+
 [resource]
 base_type = &"Node3D"
 brief_description = "Empty template suitable for all Objects"
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_m32i6")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_74jdj")])
-connections = Array[int]([0, 0, 1, 0])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_m32i6"), SubResource("OScriptNodeCallMemberFunction_74jdj")])
+connections = Array[int]([3, 0, 1, 0, 0, 0, 3, 0, 2, 0, 3, 1, 4, 0, 3, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_m32i6"), SubResource("OScriptNodeCallMemberFunction_74jdj"), SubResource("OScriptNodeAutoload_74jdj"), SubResource("OScriptNodeCallMemberFunction_lbqcc"), SubResource("OScriptNodeVariableGet_74jdj")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_orolp"), SubResource("OScriptGraph_lbqcc")])

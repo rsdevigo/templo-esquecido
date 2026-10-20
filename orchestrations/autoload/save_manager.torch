@@ -1,11 +1,11 @@
-[orchestration type="OScript" load_steps=6 format=4 uid="uid://cg8fmguustnn7"]
+[orchestration type="OScript" load_steps=8 format=4 uid="uid://cg8fmguustnn7"]
 
 [obj type="OScriptFunction" id="OScriptFunction_fdhbi"]
 guid = "64AE7C2C-F63B-459F-9FE5-FC302681C909"
 method = {
 "name": &"coletar_item",
 "args": [{
-"name": &"NewParam",
+"name": &"item",
 "type": 24,
 "class_name": &"ItemData"
 }]
@@ -20,22 +20,73 @@ flags = 8
 [obj type="OScriptGraph" id="OScriptGraph_unoxy"]
 graph_name = &"coletar_item"
 flags = 22
-nodes = Array[int]([0])
+nodes = Array[int]([0, 1, 2])
 functions = Array[int]([0])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_6jpay"]
 function_id = "64AE7C2C-F63B-459F-9FE5-FC302681C909"
 id = 0
+position = Vector2(-420, -80)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecOut",
 "dir": 1,
 "flags": 4
 }, {
-"pin_name": &"NewParam",
+"pin_name": &"item",
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "ItemData"
+"target_class": "ItemData",
+"dv": null
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_p7jcg"]
+variable_name = &"collected_items"
+id = 1
+position = Vector2(-480, -180)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 28,
+"dir": 1,
+"flags": 2050,
+"label": "collected_items",
+"dv": [],
+"hint": 31,
+"hint_string": "ItemData"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_q4qkg"]
+function_name = &"append"
+target_type = 28
+flags = 520
+method = {
+"name": &"append",
+"args": [{
+"name": &"value",
+"usage": 131078
+}]
+}
+chain = false
+id = 2
+size = Vector2(140, 146)
+position = Vector2(40, -160)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 28,
+"flags": 2058,
+"label": "Array",
+"dv": []
+}, {
+"pin_name": &"value",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
 }])
 
 [obj type="OScriptVariable" id="OScriptVariable_fdhbi"]
@@ -54,5 +105,6 @@ base_type = &"Node"
 description = "Base template for Node with default Godot cycle methods."
 variables = Array[OScriptVariable]([SubResource("OScriptVariable_fdhbi")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_fdhbi")])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_6jpay")])
+connections = Array[int]([0, 0, 2, 0, 1, 0, 2, 1, 0, 1, 2, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_6jpay"), SubResource("OScriptNodeVariableGet_p7jcg"), SubResource("OScriptNodeCallMemberFunction_q4qkg")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e"), SubResource("OScriptGraph_unoxy")])

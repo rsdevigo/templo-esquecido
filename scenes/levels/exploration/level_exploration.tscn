@@ -4,7 +4,6 @@
 [ext_resource type="Environment" uid="uid://dn7oj7yw2lt7g" path="res://resources/env_world.tres" id="2_4kn3d"]
 [ext_resource type="PackedScene" uid="uid://cfkkylcqls1i8" path="res://scenes/characters/Player.tscn" id="2_ywr8x"]
 [ext_resource type="MeshLibrary" uid="uid://kyisblnl2rqa" path="res://resources/dungeon.tres" id="4_4kn3d"]
-[ext_resource type="PackedScene" uid="uid://c3dh7k70efekh" path="res://assets/dungeon/coin.glb" id="5_aypup"]
 [ext_resource type="PackedScene" uid="uid://nt6tl0jbx7n3" path="res://assets/dungeon/banner.glb" id="6_lhcdx"]
 [ext_resource type="PackedScene" uid="uid://cxd53l7i0gpun" path="res://scenes/interactables/chest_interactable.tscn" id="9_6jpay"]
 [ext_resource type="PackedScene" uid="uid://bie5wq8gi1v3i" path="res://scenes/interactables/coin_interactable.tscn" id="9_unoxy"]
@@ -166,18 +165,6 @@ omni_range = 3.6479645
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.06515, 3.61595, 12.75568)
 collision_mask = 3
 
-[node name="coin2" parent="." unique_id=802913641 instance=ExtResource("5_aypup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.615814, 5.504856e-16, -7.435341)
-
-[node name="coin3" parent="." unique_id=808610354 instance=ExtResource("5_aypup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4552, 5.504856e-16, -7.617758)
-
-[node name="coin4" parent="." unique_id=370012512 instance=ExtResource("5_aypup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.489197, 5.504856e-16, -7.2837205)
-
-[node name="coin5" parent="." unique_id=1973090788 instance=ExtResource("5_aypup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.47377, 5.504856e-16, -7.505612)
-
 [node name="banner2" parent="." unique_id=1981270885 instance=ExtResource("6_lhcdx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.245346, 0, -2.3988223)
 
@@ -196,3 +183,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.014576, 0, -11.93264)
 
 [node name="ChestInteractable" parent="." unique_id=1615743445 instance=ExtResource("9_6jpay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.468613, -2.3841858e-07, -11.466957)
+
+[node name="CoinInteractable2" parent="." unique_id=39793674 instance=ExtResource("9_unoxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.926838, 5.504856e-16, -7.2780848)
+
+[node name="CoinInteractable3" parent="." unique_id=1333601899 instance=ExtResource("9_unoxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.144024, 5.504856e-16, -7.2780848)
+
+[node name="CoinInteractable4" parent="." unique_id=1394631262 instance=ExtResource("9_unoxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.96576, 5.504856e-16, -7.2780848)
+
+[node name="CoinInteractable5" parent="." unique_id=883097174 instance=ExtResource("9_unoxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.480522, 5.504856e-16, -7.2780848)
