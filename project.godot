@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://dt3tmq5tceggq"
 SaveManager="*uid://cg8fmguustnn7"
+SaveComponent="*uid://dmxgasqgpntb4"
 
 [display]
 

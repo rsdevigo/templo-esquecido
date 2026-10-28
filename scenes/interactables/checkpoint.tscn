@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djfyy8mceyiqv"]
+
+[ext_resource type="PackedScene" uid="uid://bik3lovkcsdr0" path="res://assets/dungeon/potion.glb" id="1_b8gku"]
+[ext_resource type="Script" uid="uid://3dyc21n2ds11" path="res://orchestrations/interactable_object.torch" id="2_2iwfj"]
+[ext_resource type="Script" uid="uid://dhohjhvnbdn1v" path="res://orchestrations/checkpoint.torch" id="2_8nmd2"]
+
+[node name="Checkpoint" unique_id=1219244855 instance=ExtResource("1_b8gku")]
+script = ExtResource("2_8nmd2")
+
+[node name="StaticBody3D" parent="potion" parent_id_path=PackedInt32Array(1336423913) index="0" unique_id=1855152287]
+script = ExtResource("2_2iwfj")
+
+[connection signal="has_been_interacted" from="potion/StaticBody3D" to="." method="_interact_on_checkpoint"]
