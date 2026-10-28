@@ -7,6 +7,7 @@ flags = 8
 [obj type="OScriptVariable" id="OScriptVariable_unoxy"]
 name = "collected_items"
 category = "Default"
+exported = true
 info = {
 "name": &"collected_items",
 "type": 28,
@@ -18,12 +19,12 @@ default_value = Array[Resource("res://scripts/resources/item_data.gd")]([])
 [obj type="OScriptVariable" id="OScriptVariable_6jpay"]
 name = "last_checkpoint"
 category = "Default"
+exported = true
 info = {
 "name": &"last_checkpoint",
-"type": 24,
-"class_name": &"Node3D"
+"type": 9
 }
-default_value = null
+default_value = Vector3(0, 0, 0)
 
 [resource]
 base_type = &"Resource"

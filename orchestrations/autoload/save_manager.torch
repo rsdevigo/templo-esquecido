@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=8 format=4 uid="uid://cg8fmguustnn7"]
+[orchestration type="OScript" load_steps=9 format=4 uid="uid://cg8fmguustnn7"]
 
 [obj type="OScriptFunction" id="OScriptFunction_fdhbi"]
 guid = "64AE7C2C-F63B-459F-9FE5-FC302681C909"
@@ -26,7 +26,7 @@ functions = Array[int]([0])
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_6jpay"]
 function_id = "64AE7C2C-F63B-459F-9FE5-FC302681C909"
 id = 0
-position = Vector2(-420, -80)
+position = Vector2(-460, -80)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecOut",
 "dir": 1,
@@ -36,8 +36,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "ItemData",
-"dv": null
+"target_class": "ItemData"
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_p7jcg"]
@@ -77,8 +76,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 28,
 "flags": 2058,
-"label": "Array",
-"dv": []
+"label": "Array"
 }, {
 "pin_name": &"value",
 "flags": 2,
@@ -100,10 +98,19 @@ info = {
 }
 default_value = Array[Resource("res://scripts/resources/item_data.gd")]([])
 
+[obj type="OScriptVariable" id="OScriptVariable_8nmd2"]
+name = "last_checkpoint"
+category = "Default"
+info = {
+"name": &"last_checkpoint",
+"type": 9
+}
+default_value = Vector3(0, 0, 0)
+
 [resource]
 base_type = &"Node"
 description = "Base template for Node with default Godot cycle methods."
-variables = Array[OScriptVariable]([SubResource("OScriptVariable_fdhbi")])
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_fdhbi"), SubResource("OScriptVariable_8nmd2")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_fdhbi")])
 connections = Array[int]([0, 0, 2, 0, 1, 0, 2, 1, 0, 1, 2, 2])
 nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_6jpay"), SubResource("OScriptNodeVariableGet_p7jcg"), SubResource("OScriptNodeCallMemberFunction_q4qkg")])

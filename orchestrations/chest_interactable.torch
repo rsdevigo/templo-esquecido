@@ -220,8 +220,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "SaveManager",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_m32i6"]
@@ -245,8 +244,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"collected_items",
 "type": 28,
@@ -293,8 +291,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "key_item_data",
-"target_class": "ItemData",
-"dv": null
+"target_class": "ItemData"
 }])
 
 [obj type="OScriptNodePromotableOperator" id="OScriptNodePromotableOperator_kdr5v"]

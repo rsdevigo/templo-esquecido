@@ -64,8 +64,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "SaveManager",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_lbqcc"]
@@ -94,14 +93,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"item",
 "type": 24,
 "flags": 2,
 "target_class": "ItemData",
-"dv": null,
 "usage": 0
 }, {
 "pin_name": &"ExecOut",
@@ -119,8 +116,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "item_data",
-"target_class": "ItemData",
-"dv": null
+"target_class": "ItemData"
 }])
 
 [obj type="OScriptVariable" id="OScriptVariable_m32i6"]
